@@ -16,7 +16,6 @@ class Board extends Component {
     const db = firebase.firestore().collection('boards').doc('Sales').collection('tasks');
     db.onSnapshot(docs => {
       this.setState({isLoading: true});
-      console.log(this.state.isLoading);
       const candidateTickets = []; 
       const inProgressTickets = [];
       const qaTickets = [];
