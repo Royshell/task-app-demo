@@ -1,0 +1,111 @@
+.board {
+  display: grid;
+  height: 100vh;
+  background-color: #F6F7F9;
+  grid-template-columns: repeat(4, 1fr);
+  // display: grid;
+  // grid-gap: 1px;
+  // background-color: #fff;
+  // color: #444;
+  // grid-template-rows: 25% 25% 25% 25%;
+  // grid-template-columns: auto auto auto auto;
+  // height: 100%;
+  // width: 100%;
+}
+
+.board > div {
+  padding: 0 1rem;
+  max-width: 25vw;
+}
+
+.column-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column-main {
+  height: calc(100% - 5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.column-main.empty {
+  background-color: #EEF2F3;
+}
+
+.column-buttons {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.column-buttons > span {
+  margin: 0 1rem;
+}
+
+.column-add {
+  padding-top: 1rem;
+  cursor: pointer;
+}
+
+.ticket {
+  max-width: 20vw;
+  height: 5.5rem;
+  background-color: #fff;
+  border: 1px #EEF2F3 solid;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 4px 1px 5px #EEF2F3;
+}
+
+.ticket-content {
+  position: relative;
+  padding: 1.5rem;
+}
+
+.ticket-check {
+  position: absolute;
+  left: 0.5rem;
+  color: #008000;
+  border: 1px #008000 solid;
+  border-radius: 50%;
+  padding: 0 4px;
+}
+
+.ticket input {
+  border: none;
+  margin-left: 1rem;
+}
+
+.ticket input:disabled {
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.ticket-ex { 
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  font-size: 18px;
+  color: #808080;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .column-buttons span, h3{
+    font-size: 14px;
+   
+  }
+  .board > div {
+    padding: 0 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .column-buttons span, h3{
+    font-size: 10px;
+  }
+}
