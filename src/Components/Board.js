@@ -34,6 +34,7 @@ class Board extends Component {
             inProgressTickets.push(doc);
             break;
           case 'Candidates':
+          default:  
             candidateTickets.push(doc);  
             break;    
         } 
@@ -50,7 +51,7 @@ class Board extends Component {
   };
 
   render() {
-    const {candidateTickets, inProgressTickets, qaTickets, completedTickets, isLoading} = this.state;
+    const {candidateTickets, inProgressTickets, qaTickets, completedTickets} = this.state;
 
     return (
       <Fragment>

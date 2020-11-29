@@ -58,11 +58,9 @@ class Ticket extends Component {
 
   render() {
     const {content, isDisabled} = this.state;
-    const {id} = this.props;
     
     return (
       <div 
-        data-id={id}
         className="ticket" 
         draggable="true" 
         onDoubleClick={(e) => this.activate(e)} 
