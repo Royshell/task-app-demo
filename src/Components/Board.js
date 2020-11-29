@@ -14,6 +14,7 @@ class Board extends Component {
 
   componentDidMount() {
     const db = firebase.firestore().collection('boards').doc('Sales').collection('tasks');
+    
     db.onSnapshot(docs => {
       this.setState({isLoading: true});
       const candidateTickets = []; 
